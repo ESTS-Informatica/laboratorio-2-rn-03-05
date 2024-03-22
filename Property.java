@@ -1,5 +1,4 @@
 
-
 /**
  * A property to sell.
  *
@@ -66,10 +65,8 @@ public class Property {
 
     @Override
     public String toString() {
-        return "Property{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                '}';
+        return "Descricao     : "+ description + 
+        "\nPreco      : "+ price+ " Euros" ;
     }
+    
 }
