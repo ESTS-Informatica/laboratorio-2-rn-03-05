@@ -1,9 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
 /**
  * Escreva uma descrição da classe CompanyTest aqui.
  * 
@@ -13,26 +11,21 @@ import org.junit.Test;
 public class CompanyTest
 {
 
-    private Company company;
-    private User client1;
-    private User client2;
-    private User seller1;
-    private User seller2;
+   private Company company;
 
     @Before
     public void setUp() {
-        // Criar a instância da empresa
         company = new Company();
-
-        // Criar os clientes
-        client1 = new User("José Manuel", "911111111", "zemanel@yahoo.com");
-        client2 = new User("António Francisco", "922222222", "tochico@hotmail.com");
-
-        // Criar os vendedores
-        seller1 = new User("Fernando Fernandes", "966777101", "fefe@remax.pt");
-        seller2 = new User("Rodrigo Rodrigues", "966777152", "roro@remax.pt");
     }
 
+    @Test
+    public void testConstructor() {
         
+        assertNotNull(company.getClients());
+        assertNotNull(company.getSellers());
+        assertNotNull(company.getProperties());
+        assertNotNull(company.getSells());
+    }
+    
     }
     
